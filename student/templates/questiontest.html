@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% block page-inner %}
+    <div class="row">
+        <div class="col-md-12">
+            <ul>
+                <li>
+                    <a href="###"><i class="fa fa-sitemap"></i> 试题练习<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="###">测试模式</a>
+                        </li>
+                        <li>
+                            <a href="###">练习模式</a>
+                        </li>
+                    </ul>
+                </li>
+                {% for chapteriterm in arr %}
+                    <li>
+                        <a href="###"><i class="fa fa-sitemap"></i> {{ chapteriterm.chapter.chaptername }}<span
+                                class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            {% for subitem in chapteriterm.subchapteritem %}
+                                <li>
+                                    <a href="###">{{ subitem.subchaptername }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}

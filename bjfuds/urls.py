@@ -26,7 +26,10 @@ urlpatterns = [
     url(r'^$', login_views.login),
     ###################学生功能#########################
     url(r'^index$',s_view.index,name='index'),
+    url(r'^questiontest$',s_view.questiontest,name='questiontest'),
     ###################教师功能#########################
     url(r'^teacherindex$',t_view.index,name='tearhcer'),
     url(r'^admin/', admin.site.urls),
+
+    url(r'^base/',s_view.base,name='base'),
 ]
