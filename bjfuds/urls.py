@@ -25,11 +25,14 @@ urlpatterns = [
 
     url(r'^$', login_views.login),
     ###################学生功能#########################
-    url(r'^index$',s_view.index,name='index'),
+    url(r'^index/$',s_view.index,name='index'),
     url(r'^questiontest$',s_view.questiontest,name='questiontest'),
+    url(r'^exam/(\d+)/',s_view.exam,name='exam'),
+    url(r'^calucate',s_view.calculationGrade,name = 'calculate'),
     ###################教师功能#########################
     url(r'^teacherindex$',t_view.index,name='tearhcer'),
+    # admin
     url(r'^admin/', admin.site.urls),
-
+    # 测试用
     url(r'^base/',s_view.base,name='base'),
 ]

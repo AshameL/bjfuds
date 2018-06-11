@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'student/base.html' %}
 <!DOCTYPE html>
 {% block page-inner %}
     <div class="row">
@@ -22,7 +22,7 @@
                         <ul class="nav nav-second-level">
                             {% for subitem in chapteriterm.subchapteritem %}
                                 <li>
-                                    <a href="###">{{ subitem.subchaptername }}</a>
+                                    <a href="{% url 'exam' subitem.id %}">{{ subitem.subchaptername }}</a>
                                 </li>
                             {% endfor %}
                         </ul>
@@ -32,4 +32,6 @@
         </div>
     </div>
 
+{% endblock %}
+{% block end %}
 {% endblock %}

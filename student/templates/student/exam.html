@@ -1,0 +1,123 @@
+{% extends 'student/base.html' %}
+<!DOCTYPE html>
+{% block page-inner %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">
+                {% for i in questionlist %}
+                    <a href="#" class="btn btn-primary question-num-head"
+                       onclick="headnumber({{ i.num }})"
+                       id="num{{ i.num }}  ">{{ i.num }}</a>
+                {% endfor %}
+            </h1>
+        </div>
+    </div>
+    <form method="POST" action="{% url 'calculate' %}">
+
+        {% for i in questionlist %}
+            <div class="row">
+                <div class="col-md-12 qusetion-frame" id="question-frame-{{ i.num }}">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            第{{ i.num }}题、 {{ i.question }}
+                        </div>
+                        <div class="panel-body">
+                            <div class="alert alert-info">
+                                <input name="Radios{{ i.num }}" value="A"  type="radio">
+                                <strong>A.</strong> {{ i.A }}
+                            </div>
+                            <div class="alert alert-info">
+                                <input name="Radios{{ i.num }}" value="B"  type="radio">
+
+                                <strong>B.</strong> {{ i.B }}
+                            </div>
+                            <div class="alert alert-info">
+                                <input name="Radios{{ i.num }}" value="C"  type="radio">
+
+                                <strong>C.</strong> {{ i.C }}
+                            </div>
+                            <div class="alert alert-info">
+                                <input name="Radios{{ i.num }}" value="D"  type="radio">
+                                <strong>D.</strong> {{ i.D }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        {% endfor %}
+        <div class="row">
+            <div class="col-md-9 "></div>
+            <div class="col-md-3 ">
+
+                <a href="#" class="btn btn-primary" id="pre-question">上一题</a>
+                <a href="#" class="btn btn-primary" id="next-question">下一题</a>
+                <input type="submit" class="btn btn-danger" value="交卷">
+            </div>
+
+        </div>
+    </form>
+{% endblock %}
+{% block end %}
+    <script>
+        // 载入界面时
+        var answerlist = new Array({{ count }});
+        if (typeof current == "undefined") {
+            var current = 1;
+        }
+        if (current == 1) {
+            $("#pre-question").hide();
+        }
+        $(".qusetion-frame").slideToggle(1);
+        $("#question-frame-1").slideToggle();
+        //离开界面时
+        {#        window.onbeforeunload = function () {#}
+        {#            return "确认离开吗？之前练习将作废！";#}
+        {#        }#}
+
+    </script>
+    <script>
+        // 上一题按钮
+        $("#pre-question").click(function () {
+            // 显示下一题按钮
+            $("#next-question").show();
+            $("#question-frame-" + current).slideToggle();
+            current = current - 1;
+            $("#question-frame-" + current).slideToggle();
+            if (current == 1) {
+                $("#pre-question").hide();
+
+            }
+        });
+        // 下一题按钮
+        $("#next-question").click(function () {
+
+            // 显示上一题按钮
+            $("#pre-question").show();
+            $("#question-frame-" + current).slideToggle();
+            current = current + 1;
+
+            $("#question-frame-" + current).slideToggle();
+            if (current + 1 >= {{ count }}) {
+                $("#next-question").hide();
+            }
+        });
+
+        // 点击题目号按钮
+        function headnumber(num) {
+            $("#pre-question").show();
+            $("#next-question").show();
+            if (num == 1) {
+                $("#pre-question").hide();
+            }
+            if (num + 1 >= {{ count }}) {
+                $("#next-question").hide();
+            }
+            $("#question-frame-" + current).slideToggle();
+            current = num;
+            $("#question-frame-" + current).slideToggle();
+        }
+    </script>
+{% endblock %}

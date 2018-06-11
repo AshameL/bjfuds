@@ -53,10 +53,10 @@
                     <a href="###"><i class="fa fa-dashboard"></i> 我的首页</a>
                 </li>
                 <li>
-                    <a href="###"><i class="fa fa-sitemap"></i> 试题练习<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-sitemap"></i> 试题练习<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="###">测试模式</a>
+                            <a href="{% url 'questiontest' %}">测试模式</a>
                         </li>
                         <li>
                             <a href="###">练习模式</a>
@@ -143,6 +143,8 @@
                 <!-- /. PAGE INNER  -->
             {% endblock %}
         </div>
+        <h1 class="page-header">
+        </h1>
         <footer><p>Copyright &copy; 北京林业大学</p></footer>
     </div>
     <!-- /. PAGE WRAPPER  -->
