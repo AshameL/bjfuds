@@ -23,16 +23,20 @@ from teacher import views as t_view
 
 urlpatterns = [
 
-    url(r'^$', login_views.login),
+    url(r'^login$', login_views.login,name='login'),
+    url(r'^logout$', login_views.logout, name='logout'),
+
     ###################学生功能#########################
-    url(r'^index/$',s_view.index,name='index'),
-    url(r'^questiontest$',s_view.questiontest,name='questiontest'),
-    url(r'^exam/(\d+)/',s_view.exam,name='exam'),
-    url(r'^calucate',s_view.calculationGrade,name = 'calculate'),
+    url(r'^index/', s_view.index, name='index'),
+    url(r'^questiontest/', s_view.questiontest, name='questiontest'),
+    url(r'^exam/(\d+)/', s_view.exam, name='exam'),
+    url(r'^calucate', s_view.calculationGrade, name='calculate'),
+    url(r'^analysis/(\d+)', s_view.showAnalysis, name='analysis'),
+    url(r'^scorelist',s_view.scorelist,name='scorelist'),
     ###################教师功能#########################
-    url(r'^teacherindex$',t_view.index,name='tearhcer'),
+    url(r'^teacherindex$', t_view.index, name='tea_index'),
     # admin
     url(r'^admin/', admin.site.urls),
     # 测试用
-    url(r'^base/',s_view.base,name='base'),
+    url(r'^base/', s_view.base, name='base'),
 ]

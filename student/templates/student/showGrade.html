@@ -1,0 +1,39 @@
+﻿{% extends 'student/base.html' %}
+<!DOCTYPE html>
+{% block page-inner %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">
+                答题完毕
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-sm-12 col-xs-12">
+            <div class="panel panel-primary text-center no-boder bg-color-green">
+                <div class="panel-body">
+                    <i class="fa fa-bar-chart-o fa-5x"></i>
+                    <h3>成绩：{{ accurancy }}</h3>
+                </div>
+                <div class="panel-footer back-footer-green">
+                    革命尚未成功，同志仍需努力！
+                </div>
+            </div>
+        </div>
+        <a href="{% url 'analysis' gradeid %}">
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="panel panel-primary text-center no-boder bg-color-red">
+                    <div class="panel-body">
+                        <i class="fa fa fa-comments fa-5x"></i>
+                        <h3>错题数：{{ errcount }} </h3>
+                    </div>
+                    <div class="panel-footer back-footer-red">
+                        查看解析
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+{% endblock %}
+

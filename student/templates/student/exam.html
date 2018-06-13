@@ -13,7 +13,7 @@
         </div>
     </div>
     <form method="POST" action="{% url 'calculate' %}">
-
+        {% csrf_token %}
         {% for i in questionlist %}
             <div class="row">
                 <div class="col-md-12 qusetion-frame" id="question-frame-{{ i.num }}">
@@ -23,21 +23,21 @@
                         </div>
                         <div class="panel-body">
                             <div class="alert alert-info">
-                                <input name="Radios{{ i.num }}" value="A"  type="radio">
+                                <input name="Radios{{ i.num }}" value="A" type="radio">
                                 <strong>A.</strong> {{ i.A }}
                             </div>
                             <div class="alert alert-info">
-                                <input name="Radios{{ i.num }}" value="B"  type="radio">
+                                <input name="Radios{{ i.num }}" value="B" type="radio">
 
                                 <strong>B.</strong> {{ i.B }}
                             </div>
                             <div class="alert alert-info">
-                                <input name="Radios{{ i.num }}" value="C"  type="radio">
+                                <input name="Radios{{ i.num }}" value="C" type="radio">
 
                                 <strong>C.</strong> {{ i.C }}
                             </div>
                             <div class="alert alert-info">
-                                <input name="Radios{{ i.num }}" value="D"  type="radio">
+                                <input name="Radios{{ i.num }}" value="D" type="radio">
                                 <strong>D.</strong> {{ i.D }}
                             </div>
                         </div>
@@ -54,6 +54,7 @@
 
                 <a href="#" class="btn btn-primary" id="pre-question">上一题</a>
                 <a href="#" class="btn btn-primary" id="next-question">下一题</a>
+                <input type="hidden" name="subid" value="{{ subid }}">
                 <input type="submit" class="btn btn-danger" value="交卷">
             </div>
 
