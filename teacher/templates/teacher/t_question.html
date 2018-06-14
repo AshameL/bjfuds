@@ -73,15 +73,11 @@
                             id
                         </th>
                         <th class="column-title">题干</th>
-                        <th class="column-title">难度</th>
+
                         <th class="column-title">答案</th>
                         <th class="column-title">章节</th>
                         <th class="column-title">知识点</th>
                         <th class="column-title no-link last"><span class="nobr">操作</span>
-                        </th>
-                        <th class="bulk-actions" colspan="7">
-                            <a class="antoo" style="color:#fff; font-weight:500;">这里怎么删除全部？？？ ( <span
-                                    class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
                         </th>
                     </tr>
                     </thead>
@@ -93,12 +89,11 @@
                                 {{ t.id }}
                             </td>
                             <td class=" ">
-                                {{ t.content|slice:'25' }}...
+                                {{ t.question|slice:'15' }}...
                             </td>
-                            <td class=" ">{{ t.difficult }}</td>
                             <td class=" ">{{ t.answer }} </td>
-                            <td class=" ">第{{ t.chapter.chap_id }}章</td>
-                            <td class=" ">{{ t.knowledge }}</td>
+                            <td class=" ">{{ t.subchapterid.chapterid.chaptername }}</td>
+                            <td class=" ">{{ t.subchapterid.subchaptername }}</td>
                             <td class=" last"><a href="{% url 'tea_question_view' t.id %}"
                                                  class="btn btn-primary btn-xs"><i class="fa fa-folder"></i>
                                 查看

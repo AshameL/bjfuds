@@ -1,10 +1,13 @@
 # coding=utf-8\
-'''
-from win32com import client as wc
+
+# from win32com import client as wc
 import os
-import pythoncom
+# import pythoncom
 import re
-from website.models import TestQuestion, User, Classes, Chapter
+from login.models import *
+from student.models import *
+from teacher.models import *
+
 import xlrd, random, string
 import logging
 
@@ -289,6 +292,3 @@ def handle_uploaded_xls_student(f):
     list_return.append("上传完毕")
     os.remove(filepathfilename)
     return list_return
-
-
-'''

@@ -15,26 +15,36 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from django.conf.urls import url
-from django.contrib import admin
 from login import views as login_views
 from student import views as s_view
 from teacher import views as t_view
 
 urlpatterns = [
 
-    url(r'^login$', login_views.login,name='login'),
+    url(r'^login$', login_views.login, name='login'),
     url(r'^logout$', login_views.logout, name='logout'),
 
-    ###################学生功能#########################
+    ###################学生功能##################################################################
     url(r'^index/', s_view.index, name='index'),
     url(r'^questiontest/', s_view.questiontest, name='questiontest'),
     url(r'^exam/(\d+)/', s_view.exam, name='exam'),
     url(r'^calucate', s_view.calculationGrade, name='calculate'),
     url(r'^analysis/(\d+)', s_view.showAnalysis, name='analysis'),
-    url(r'^scorelist',s_view.scorelist,name='scorelist'),
-    ###################教师功能#########################
-    url(r'^teacherindex$', t_view.index, name='tea_index'),
+    url(r'^scorelist', s_view.scorelist, name='scorelist'),
+    ###################教师功能#####################################################################
+    url(r'^teacherindex$', t_view.teacher, name='tea_index'),
+    url(r'^tea_question/$', t_view.upload_test, name='tea_question'),
+    # 对试题的修改 查看 删除 2017-05-02
+    url(r'^tea_question/delete/(\d+)/$', t_view.test_delete, name='tea_question_delete'),
+    url(r'^tea_question/view/(\d+)/$', t_view.test_view, name='tea_question_view'),
+    url(r'^tea_question/edit/(\d+)/$', t_view.test_edit, name='tea_question_edit'),
+    # 查看成绩
+    url(r'^tea_grades/$', t_view.grades, name='tea_grades'),
+    url(r'^tea_grades/(\d+)', t_view.gradedetails, name='tea_gradesdetails'),
+    # 文件上传
+    url(r'^tea_file/', t_view.upload_file, name='tea_file'),
+    # url(r'^tea_file_del_(\d+)', t_view.delete_file, name='tea_file_del'),
+
     # admin
     url(r'^admin/', admin.site.urls),
     # 测试用
