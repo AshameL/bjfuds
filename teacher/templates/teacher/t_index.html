@@ -52,7 +52,9 @@
                             {% for info in grade %}
                                 <li>
                                     <p>
-                                        <input type="checkbox" class="flat"> {{ info.userid.name }}:{{ info.chapter }}-->{% widthratio info.accuracy 1 100 %}%
+                                        <input type="checkbox"
+                                               class="flat">
+                                        <strong>{{ info.userid.name }}</strong>:{{ info.subchapter.chapterid.chaptername }}--{{ info.subchapter.subchaptername }}-----><strong>分数：{% widthratio info.accurancy 1 100 %}%</strong>
                                     </p>
                                 </li>
                             {% endfor %}

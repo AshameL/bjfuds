@@ -9,6 +9,8 @@ from student.models import *
 from teacher.models import *
 from django.http import *
 import os
+
+
 # Create your views here.
 
 
@@ -53,23 +55,35 @@ def upload_file(request):
             # 保存到数据库
             # ##文件路径
             path = f.name
-            curTime = getCurrentTime('%Y-%m-%d %H:%M:%S')
             suffix = path.split('.')[-1]
             r = ReferenceFile(filename=path, remark=myremark, path=filenamepath, suffix=suffix, visible=visible)
             r.save()
-            # 这里发出上传文件的公告
-            a = Announcement(briefTitle='【新资料上传】', briefContent=f.name + '已经上传，请同学们及时查看并下载！', briefType='资源公告',
-                             briefClass='校内')
-            a.save()
-            print('upload file success')
+            # 【功能暂时关闭】这里发出上传文件的公告
+            # a = Announcement(briefTitle='【新资料上传】', briefContent=f.name + '已经上传，请同学们及时查看并下载！',
+            #                briefType='资源公告', )
+            #
+            # a.save()
         else:
-            return HttpResponse('Upload Error')
+
+            return HttpResponse('500！！')
 
     referencefile = ReferenceFile.objects.all().order_by('-uploadtime')
     return render(request, 'teacher/t_file.html', {'referencefile': referencefile})
 
 
-# 上传试题
+def delete_file(request, tid):
+    # 删除文件存储位置
+    info = ReferenceFile.objects.get(id=tid)
+    # filedir = os.path.dirname(__file__)
+    # filedir = filedir.replace('\\', '/')  ## 这里会不会有问题。。。
+    path = info.path
+    os.remove(path)
+    # 删除数据库
+    ReferenceFile.objects.get(id=tid).delete()
+    return redirect('/tea_file/')
+
+
+# 上传试题【有bug！！！】
 def upload_test(request):
     # 上传试题时
     if request.method == 'POST':
@@ -123,7 +137,7 @@ def test_edit(request, tid):
             info.answer = my_form.cleaned_data['answer']
             info.chapter = my_form.cleaned_data['chapter']
             info.knowledge = my_form.cleaned_data['knowledge']
-            info.save()
+            # info.save() # 为安全起见、暂时注销
 
     return render(request, 'teacher/t_que_edit.html', {'info': info})
 
@@ -138,7 +152,18 @@ def test_delete(request, tid):
 # 查看试题
 def test_view(request, tid):
     info = Questionitem.objects.get(id=tid)
-    return render(request, 'teacher/t_que_view.html', {'info': info})
+    dictChoice = {'A': 0, 'B': 0, 'C': 0, 'D': 0, '': 0}
+    for i in dictChoice:
+        try:
+            dictChoice[i] = ErrorQue.objects.get(erroranswer=i, testid_id=info.id).count
+        except:
+            pass
+    dictChoice['lost'] = dictChoice.pop('')
+    try:
+        dictChoice[info.answer] = QueAccurancy.objects.get(id_id=info.id).correctCount
+    except:
+        pass
+    return render(request, 'teacher/t_que_view.html', {'info': info, 'dictChoice': dictChoice})
 
 
 # 查看成绩
@@ -149,9 +174,28 @@ def grades(request):
 
 
 def gradedetails(request, tid):
-    grade = Grade.objects.get(id=tid)
-    errorque = ErrorQue.objects.filter(gradeid=tid)
-    return render(request, 'teacher/t_gradedetails.html', {'grade': grade, 'error': errorque})
+    myGrade = Grade.objects.get(id=tid)
+    # errorque = ErrorQue.objects.filter(gradeid=tid)
+    queList = []
+    idlist = myGrade.questionlist[1:-1].split(',')
+    answerlist = myGrade.answerlist[1:-1].replace('\'', '').replace(' ', '').split(',')
+    # print(idlist)
+    # print(answerlist)
+    num = 0
+
+    for i in range(len(idlist)):
+        num = num + 1
+        try:
+            item = Questionitem.objects.get(id=idlist[i])
+            item.yourAnswer = answerlist[i]
+            item.num = num
+            queList.append(item)
+        except:
+            item.yourAnswer = answerlist[i]
+            item.num = num
+            queList.append('题目丢失')
+    print(queList)
+    return render(request, 'teacher/t_gradedetails.html', {'grade': myGrade, 'mychoice': queList, 'count': num})
 
 
 # 教师声明主页

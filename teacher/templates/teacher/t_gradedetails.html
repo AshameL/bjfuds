@@ -22,38 +22,45 @@
         <div class="x_content">
             <h4>姓名：{{ grade.userid.name }}</h4>
             <h4>学号：{{ grade.userid.username }}</h4>
-            <h4>正确率：{% widthratio grade.accuracy 1 100 %}%</h4>
+            <h4>正确率：{% widthratio grade.accurancy 1 100 %}%</h4>
             <p>_______________________________________________________________________</p>
-            <h4>错题列表：</h4>
+
+
         </div>
         <div class="x_content">
             <!-- start accordion -->
             <div class="accordion" role="tablist" aria-multiselectable="true">
-                {% for info in error %}
+                {% for info in mychoice %}
 
                     <div class="panel">
                         <a class="panel-heading collapsed" role="tab" id="heading{{ info.id }}" data-toggle="collapse"
                            data-parent="#accordion" href="#collapse{{ info.id }}" aria-expanded="false"
                            aria-controls="collapse{{ info.id }}">
-                            <h4 class="panel-title">{{ info.testid.content|slice:"10" }}......</h4>
+                            {% if info.yourAnswer == info.answer %}
+                                <h4 class="panel-title">{{ info.num }}、{{ info.question|slice:"10" }}......</h4>
+                            {% else %}
+                                <h4 class="panel-title" style="color:red">{{ info.num }}、{{ info.question|slice:"10" }}......</h4>
+                            {% endif %}
                         </a>
                         <div id="collapse{{ info.id }}" class="panel-collapse collapse" role="tabpanel"
                              aria-labelledby="heading{{ info.id }}"
                              aria-expanded="false" style="height: 0px;">
                             <div class="panel-body">
-                                <p><strong>{{ info.testid.content }}</strong>
+                                <p><strong>{{ info.question }}</strong>
                                 </p>
-                                <p>{{ info.testid.A }}</p>
-                                <p>{{ info.testid.B }}</p>
-                                <p>{{ info.testid.C }}</p>
-                                <p>{{ info.testid.D }}</p>
-                                <p>答案：{{ info.testid.answer }}</p>
-                                <strong>错答：{{ info.erroranswer }}</strong>
+                                <p><strong>A.</strong>{{ info.A }}</p>
+                                <p><strong>B.</strong>{{ info.B }}</p>
+                                <p><strong>C.</strong>{{ info.C }}</p>
+                                <p><strong>D.</strong>{{ info.D }}</p>
+                                <p>答案：<strong>{{ info.answer }}</strong></p>
+                                <strong style="color:red">选择：
+                                    {{ info.yourAnswer }}
+                                </strong>
                             </div>
                         </div>
                     </div>
                 {% endfor %}
-            <h5 style="float: right">{{ grade.time }}</h5>
+                <h5 style="float: right">{{ grade.time }}</h5>
             </div>
             <!-- end of accordion -->
 

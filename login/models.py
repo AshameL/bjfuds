@@ -20,3 +20,10 @@ class User(models.Model):
     state = models.IntegerField(default=0)  # -1锁定 0离线 1在线
     type = models.IntegerField(default=1)  # type：0老师，1学生，2外校人员
     lastlogin = models.DateTimeField(blank=True, null=True)  # 最近登录时间
+
+
+# 日活
+class dateActivity(models.Model):
+    user = models.ForeignKey(User)
+    logintime = models.DateTimeField(auto_now=True)
+    logouttime = models.DateTimeField(auto_now=True, blank=True, null=True)

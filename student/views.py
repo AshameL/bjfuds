@@ -60,26 +60,24 @@ def calculationGrade(request):
                 correct = correct + 1
                 qa.correctCount = qa.correctCount + 1
                 qa.save()
+
             else:
                 qa.wrongCount = qa.wrongCount + 1
                 qa.save()
                 from teacher.models import ErrorQue
                 # 回答错误
                 # 错题录入如果存在,count++；不存在，新建。
-                if yourAnswer == '':
-                    pass
-                else:
-                    try:
-                        tmp = ErrorQue.objects.get(testid_id=34, erroranswer=yourAnswer)
-                        tmp.count = tmp.count + 1
-                        tmp.save()
-                    except:
-                        tmp = ErrorQue()
-                        tmp.testid_id = i.id
-                        tmp.correct = i.answer
-                        tmp.erroranswer = yourAnswer
-                        tmp.count = 1
-                        tmp.save()
+                try:
+                    tmp = ErrorQue.objects.get(testid_id=34, erroranswer=yourAnswer)
+                    tmp.count = tmp.count + 1
+                    tmp.save()
+                except:
+                    tmp = ErrorQue()
+                    tmp.testid_id = i.id
+                    tmp.correct = i.answer
+                    tmp.erroranswer = yourAnswer
+                    tmp.count = 1
+                    tmp.save()
         # 计算正确率
         accurancy = round(correct / num, 4) * 100
         # 保存成绩单到数据库
@@ -106,8 +104,8 @@ def showAnalysis(request, gradeid):
     queList = []
     idlist = myGrade.questionlist[1:-1].split(',')
     answerlist = myGrade.answerlist[1:-1].replace('\'', '').replace(' ', '').split(',')
-    print(idlist)
-    print(answerlist)
+    # print(idlist)
+    # print(answerlist)
     num = 0
 
     for i in range(len(idlist)):

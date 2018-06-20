@@ -29,8 +29,8 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">题干：</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <textarea name="content" class="form-control col-md-7 col-xs-12" rows="6"
-                            >{{ info.content }}</textarea>
+                            <textarea name="content" readonly class="form-control col-md-7 col-xs-12" rows="6"
+                            >{{ info.html|safe }}</textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -78,8 +78,8 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">章节：</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <textarea name="chapter" class="form-control col-md-7 col-xs-12" rows="1"
-                            >{{ info.chapter }}</textarea>
+                            <textarea name="chapter" readonly class="form-control col-md-7 col-xs-12" rows="1"
+                            >{{ info.subchapterid.chapterid.chaptername }}</textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -87,7 +87,7 @@
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <textarea name="knowledge" class="form-control col-md-7 col-xs-12" rows="1"
-                            >{{ info.knowledge }}</textarea>
+                            >{{ info.subchapterid.subchaptername }}</textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -95,7 +95,7 @@
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <textarea name="difficult" class="form-control col-md-7 col-xs-12" rows="1"
-                            >{{ info.difficult }}</textarea>
+                            >{{ info.difficulty }}</textarea>
                         </div>
                     </div>
 
@@ -106,7 +106,6 @@
                         </a>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>

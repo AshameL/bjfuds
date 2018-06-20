@@ -24,8 +24,8 @@ def getCurrentTime(format):
 def handle_uploaded_file(f, directory):
     # 系统根路径
     filedirSystemRoot = os.path.dirname(__file__)
-    # 系统根路径 转换 \
-    filedirSystemRoot = filedirSystemRoot.replace('\\', '/')
+    # 系统根路径 转换 \  windows下需要，linux不需要
+    #filedirSystemRoot = filedirSystemRoot.replace('\\', '/')
     # 文件夹 static/【指定文件夹】
     filepathStaticDirectory = '/static/' + directory + '/'
     # 处理文件名
@@ -50,8 +50,7 @@ def handle_uploaded_file(f, directory):
     if directory == 'media':
         # 保存为html
         return saveAsHTML(filepathfilename)
-    # 返回的 文件名不带路径
-    return fileNameAddTimeRemoveSuffix + '.' + fileSuffixName
+    return filepathfilename
 
 
 # 保存为HTML文件

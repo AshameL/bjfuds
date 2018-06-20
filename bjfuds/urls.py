@@ -43,10 +43,13 @@ urlpatterns = [
     url(r'^tea_grades/(\d+)', t_view.gradedetails, name='tea_gradesdetails'),
     # 文件上传
     url(r'^tea_file/', t_view.upload_file, name='tea_file'),
-    # url(r'^tea_file_del_(\d+)', t_view.delete_file, name='tea_file_del'),
+    url(r'^tea_file_del_(\d+)', t_view.delete_file, name='tea_file_del'),
+    # 学生名单管理
+    url(r'^tea_manage',t_view.manage,name='tea_manage'),
 
     # admin
     url(r'^admin/', admin.site.urls),
     # 测试用
     url(r'^base/', s_view.base, name='base'),
+
 ]

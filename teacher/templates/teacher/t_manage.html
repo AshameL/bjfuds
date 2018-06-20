@@ -50,7 +50,6 @@
                                 <th class="column-title">用户名学号</th>
                                 <th class="column-title">姓名</th>
                                 <th class="column-title">密码是否重置</th>
-                                <th class="column-title">头像是否重置</th>
                                 <th class="column-title">班级</th>
                                 <th class="column-title">类型</th>
                                 <th class="column-title no-link last"><span class="nobr">操作</span></th>
@@ -79,12 +78,7 @@
                                             否
                                         {% endif %}
                                     </td>
-                                    <td class=" ">{% if u.headImage == '//' %}
-                                        默认头像
-                                    {% else %}
-                                        头像自定义#下次改成头像显示
-                                    {% endif %} </td>
-                                    <td class=" ">{{ u.myclass.classname }} </td>
+                                    <td class=" ">{{ u.myClass.classname }} </td>
                                     <td class=" ">
                                         {% if u.type == 1 %}
                                             学生

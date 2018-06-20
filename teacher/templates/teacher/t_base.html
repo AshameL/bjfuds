@@ -11,6 +11,7 @@
     <title>{% block title %}教师管理界面{% endblock %} </title>
 
     <!-- Bootstrap -->
+
     <link href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
@@ -69,7 +70,7 @@
                             <li><a href="{% url 'tea_question' %}"><i class="fa fa-edit"></i> 试题管理 </a></li>
                             <li><a href="{% url 'tea_grades' %}"><i class="fa fa-share-alt"></i> 查看成绩</a></li>
                             <li><a href="{% url 'tea_file' %}"><i class="fa fa-desktop"></i> 资料上传</a></li>
-                            <li><a href="#"><i class="fa fa-bar-chart-o"></i> 用户管理 </a></li>
+                            <li><a href="{% url 'tea_manage' %}"><i class="fa fa-bar-chart-o"></i> 用户管理 </a></li>
                         </ul>
                     </div>
 
