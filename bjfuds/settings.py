@@ -25,7 +25,7 @@ SECRET_KEY = 's-2nye+vpov&26-s)8t6nfjez66gsy)zb^@jadxk01)+)6_l4c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'login',
     'blog',
     'student',
-    'teacher'
+    'teacher',
+    'portal',
 ]
 
 MIDDLEWARE = [

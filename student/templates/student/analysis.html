@@ -33,7 +33,7 @@
                             <div class="alert alert-danger"><strong>A.</strong> {{ i.A }}
                             </div>
                         {% else %}
-                            <div class="alert alert-info"><strong>A.</strong> {{ i.A }}
+                            <div class="alert "><strong>A.</strong> {{ i.A }}
                             </div>
                         {% endif %}
 
@@ -44,7 +44,7 @@
                             <div class="alert alert-danger"><strong>B.</strong> {{ i.B }}
                             </div>
                         {% else %}
-                            <div class="alert alert-info"><strong>B.</strong> {{ i.B }}
+                            <div class="alert "><strong>B.</strong> {{ i.B }}
                             </div>
                         {% endif %}
 
@@ -55,7 +55,7 @@
                             <div class="alert alert-danger"><strong>C.</strong> {{ i.C }}
                             </div>
                         {% else %}
-                            <div class="alert alert-info"><strong>C.</strong> {{ i.C }}
+                            <div class="alert "><strong>C.</strong> {{ i.C }}
                             </div>
                         {% endif %}
 
@@ -66,7 +66,7 @@
                             <div class="alert alert-danger"><strong>D.</strong> {{ i.D }}
                             </div>
                         {% else %}
-                            <div class="alert alert-info"><strong>D.</strong> {{ i.D }}
+                            <div class="alert "><strong>D.</strong> {{ i.D }}
                             </div>
                         {% endif %}
 
@@ -78,7 +78,7 @@
                             本题解析
                         </div>
                         <div class="panel-body">
-                            <p>{{ i.question_resolution }}</p>
+                            <p>{{ i.question_resolution|safe }}</p>
                         </div>
 
                     </div>

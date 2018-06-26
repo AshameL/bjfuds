@@ -57,6 +57,10 @@
                                         colspan="1" style="width: 194px;"
                                         aria-label="time(s): activate to sort column ascending">做题时间
                                     </th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1"
+                                        colspan="1" style=""
+                                        aria-label="time(s): activate to sort column ascending">详情
+                                    </th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -67,6 +71,7 @@
                                         <td class="sorting_2">{{ i.subchapter.subchaptername }}</td>
                                         <td class=" ">{{ i.accurancy }}</td>
                                         <td class="center ">{{ i.time }}</td>
+                                        <td class="center "><a href="{% url 'analysis' i.id %}">查看</a></td>
                                     </tr>
                                 {% endfor %}
 
@@ -125,7 +130,7 @@
                 "sInfo": "当前显示 _START_ 到 _END_ 条，共 _TOTAL_ 条记录",
                 "sInfoEmpty": "显示0到0条记录",
                 "sInfoFiltered": "数据表中共为 _MAX_ 条记录",
-                "sSearch": "模糊：",
+                "sSearch": "模糊查找：",
                 "oPaginate": {
                     "sFirst": "首页",
                     "sPrevious": "上一页",

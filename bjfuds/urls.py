@@ -18,12 +18,24 @@ from django.contrib import admin
 from login import views as login_views
 from student import views as s_view
 from teacher import views as t_view
+from portal import views as portal_view
 
 urlpatterns = [
-
+    url(r'^$', portal_view.homePage, name='homepage'),
     url(r'^login$', login_views.login, name='login'),
     url(r'^logout$', login_views.logout, name='logout'),
+    # 门户
 
+    url(r'^homepage', portal_view.homePage, name='homepage'),
+
+    #url(r'^hm/base/', portal_view.base, name='base'),
+
+    url(r'^team/', portal_view.team, name='team'),
+    url(r'^material/', portal_view.material, name='material'),
+    url(r'^download/', portal_view.download, name="download"),
+    url(r'^contact/', portal_view.contact, name="contact"),
+    url(r'^downloadDetail/(\w+)', portal_view.downloadDetail, name="downloadDetail"),
+    url(r'^downloadIntoLocation/(\d+)', portal_view.downloadIntoLocation, name='downloadIntoLocation'),
     ###################学生功能##################################################################
     url(r'^index/', s_view.index, name='index'),
     url(r'^questiontest/', s_view.questiontest, name='questiontest'),
@@ -45,11 +57,10 @@ urlpatterns = [
     url(r'^tea_file/', t_view.upload_file, name='tea_file'),
     url(r'^tea_file_del_(\d+)', t_view.delete_file, name='tea_file_del'),
     # 学生名单管理
-    url(r'^tea_manage',t_view.manage,name='tea_manage'),
+    url(r'^tea_manage', t_view.manage, name='tea_manage'),
 
     # admin
     url(r'^admin/', admin.site.urls),
     # 测试用
     url(r'^base/', s_view.base, name='base'),
-
 ]
