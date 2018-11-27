@@ -31,15 +31,15 @@
         <ul class="nav navbar-top-links navbar-right">
 
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    你好，{{ request.session.name }}<i class="fa fa-user fa-fw"></i>
                 </a>
-                <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> 密码修改</a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> 退出登录</a>
-                    </li>
-                </ul>
+                {#                <ul class="dropdown-menu dropdown-user">#}
+                {#                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> 密码修改</a>#}
+                {#                    </li>#}
+                {#                    <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> 退出登录</a>#}
+                {#                    </li>#}
+                {#                </ul>#}
                 <!-- /.dropdown-user -->
             </li>
             <!-- /.dropdown -->
@@ -49,25 +49,31 @@
     <nav class="navbar-default navbar-side" role="navigation">
         <div class="sidebar-collapse">
             <ul class="nav" id="main-menu">
+                {#                <li>#}
+                {#                    <a href="###"><i class="fa fa-dashboard"></i> 我的首页</a>#}
+                {#                </li>#}
                 <li>
-                    <a href="###"><i class="fa fa-dashboard"></i> 我的首页</a>
+                    <a href="{% url 'questiontest' %}"><i class=""></i> 试题练习<span class="fa arrow"></span></a>
+                    {#                    <ul class="nav nav-second-level">#}
+                    {#                        <li>#}
+                    {#                            <a href="{% url 'questiontest' %}">测试模式</a>#}
+                    {#                        </li>#}
+                    {#                        <li>#}
+                    {#                            <a href="#">练习模式</a>#}
+                    {#                        </li>#}
+                    {#                    </ul>#}
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-sitemap"></i> 试题练习<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="{% url 'questiontest' %}">测试模式</a>
-                        </li>
-                        <li>
-                            <a href="###">练习模式</a>
-                        </li>
-                    </ul>
+                    <a href="{% url 'scorelist' %}"><i class="fa "></i> 做题记录</a>
                 </li>
                 <li>
-                    <a href="{% url 'scorelist' %}"><i class="fa fa-dashboard"></i> 做题记录</a>
+                    <a href="{% url 'editpassword' %}"><i class="fa "></i> 修改密码</a>
                 </li>
                 <li>
-                    <a href="{% url 'homepage' %}"><i class="fa fa-dashboard"></i> 返回门户</a>
+                    <a href="{% url 'homepage' %}"><i class="fa "></i> 去往首页</a>
+                </li>
+                <li>
+                    <a href="{% url 'logout' %}" onClick="return confirm('确定退出登录吗?');"><i class="fa "></i> 退出登录</a>
                 </li>
             </ul>
 

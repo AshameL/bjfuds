@@ -1,3 +1,4 @@
+﻿#coding:utf-8
 """bjfuds URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -19,16 +20,17 @@ from login import views as login_views
 from student import views as s_view
 from teacher import views as t_view
 from portal import views as portal_view
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     url(r'^$', portal_view.homePage, name='homepage'),
-    url(r'^login$', login_views.login, name='login'),
-    url(r'^logout$', login_views.logout, name='logout'),
+    url(r'^login', login_views.login, name='login'),
+    url(r'^logout', login_views.logout, name='logout'),
+    url(r'^editpassword', login_views.editpassword, name='editpassword'),
     # 门户
 
     url(r'^homepage', portal_view.homePage, name='homepage'),
-
-    #url(r'^hm/base/', portal_view.base, name='base'),
 
     url(r'^team/', portal_view.team, name='team'),
     url(r'^material/', portal_view.material, name='material'),
@@ -43,13 +45,15 @@ urlpatterns = [
     url(r'^calucate', s_view.calculationGrade, name='calculate'),
     url(r'^analysis/(\d+)', s_view.showAnalysis, name='analysis'),
     url(r'^scorelist', s_view.scorelist, name='scorelist'),
+
     ###################教师功能#####################################################################
-    url(r'^teacherindex$', t_view.teacher, name='tea_index'),
-    url(r'^tea_question/$', t_view.upload_test, name='tea_question'),
+    url(r'^teacherindex', t_view.teacher, name='tea_index'),
+
     # 对试题的修改 查看 删除 2017-05-02
     url(r'^tea_question/delete/(\d+)/$', t_view.test_delete, name='tea_question_delete'),
     url(r'^tea_question/view/(\d+)/$', t_view.test_view, name='tea_question_view'),
     url(r'^tea_question/edit/(\d+)/$', t_view.test_edit, name='tea_question_edit'),
+    url(r'^tea_question', t_view.upload_test, name='tea_question'),
     # 查看成绩
     url(r'^tea_grades/$', t_view.grades, name='tea_grades'),
     url(r'^tea_grades/(\d+)', t_view.gradedetails, name='tea_gradesdetails'),
@@ -62,5 +66,5 @@ urlpatterns = [
     # admin
     url(r'^admin/', admin.site.urls),
     # 测试用
-    url(r'^base/', s_view.base, name='base'),
-]
+    #url(r'^base/', s_view.base, name='base'),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

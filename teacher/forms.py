@@ -40,7 +40,7 @@ class FileUpload(forms.Form):
     filename = forms.FileField()
     # visibleRange = forms.ChoiceField(label='可见班级：', choices=CHOICE_BOX_CHOICE, widget=forms.RadioSelect())
     remark = forms.CharField(required=False)
-    visibleRange = forms.CharField()
+    #visibleRange = forms.CharField()
 
 
 # 试题上传 学生名单上传 也在此

@@ -86,14 +86,7 @@
                         <li class="">
                             <a href="{% url 'logout' %}" class="user-profile dropdown-toggle" data-toggle="dropdown"
                                aria-expanded="false">
-                                <img src="{% static 'headimg/teacher.jpg' %}" alt=""><i
-                                    class="fa fa-sign-out pull-right"></i>退出登录
-                            </a>
-                        </li>
-                        <li role="presentation" class="dropdown">
-                            <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
-                               aria-expanded="false">
-                                <i class="fa fa-envelope-o"></i>
+                                <img src="{% static 'headimg/teacher.jpg' %}" alt="">退出登录
                             </a>
                         </li>
                     </ul>
@@ -104,9 +97,7 @@
         <!-- page content -->
         <div class="right_col" role="main">
             {% block content %}
-
                 <div>这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容。</div>
-
             {% endblock %}
         </div>
 

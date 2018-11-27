@@ -1,3 +1,4 @@
+#coding:utf-8
 from django.shortcuts import render
 from  teacher.forms import *
 from  teacher.util_tool import *
@@ -9,12 +10,14 @@ from student.models import *
 from teacher.models import *
 from django.http import *
 import os
+from login.auth.incepter import login_Check
 
 
 # Create your views here.
 
 
 # 教师主页
+@login_Check
 def teacher(request):
     # 查询数据库
     user = User.objects.count()
@@ -29,6 +32,7 @@ def teacher(request):
 
 # 学生账号管理
 # 上传学生名单
+@login_Check
 def manage(request):
     re_list = []
     if request.method == 'POST':
@@ -43,20 +47,21 @@ def manage(request):
 
 
 # 上传资料 referenceFile
+@login_Check
 def upload_file(request):
     if request.method == 'POST':
         form = FileUpload(request.POST, request.FILES)
         if form.is_valid():
             f = form.cleaned_data['filename']
             myremark = form.cleaned_data['remark']
-            visible = form.cleaned_data['visibleRange']
+            #visible = form.cleaned_data['visibleRange']
             # 上传文件
             filenamepath = handle_uploaded_file(f, 'reference')  # 这里处理一下，只进行上传
             # 保存到数据库
             # ##文件路径
             path = f.name
             suffix = path.split('.')[-1]
-            r = ReferenceFile(filename=path, remark=myremark, path=filenamepath, suffix=suffix, visible=visible)
+            r = ReferenceFile(filename=path, remark=myremark, path=filenamepath, suffix=suffix)
             r.save()
             # 【功能暂时关闭】这里发出上传文件的公告
             # a = Announcement(briefTitle='【新资料上传】', briefContent=f.name + '已经上传，请同学们及时查看并下载！',
@@ -70,7 +75,7 @@ def upload_file(request):
     referencefile = ReferenceFile.objects.all().order_by('-uploadtime')
     return render(request, 'teacher/t_file.html', {'referencefile': referencefile})
 
-
+@login_Check
 def delete_file(request, tid):
     # 删除文件存储位置
     info = ReferenceFile.objects.get(id=tid)
@@ -82,8 +87,8 @@ def delete_file(request, tid):
     ReferenceFile.objects.get(id=tid).delete()
     return redirect('/tea_file/')
 
-
-# 上传试题【有bug！！！】
+@login_Check
+# 上传试题【有bug！！！8-25调试中】
 def upload_test(request):
     # 上传试题时
     if request.method == 'POST':
@@ -116,12 +121,12 @@ def upload_test(request):
     testing = Questionitem.objects.all()
     return render(request, 'teacher/t_question.html', {'form': my_form, 'testing': testing})
 
-
+@login_Check
 # 教师修改密码
 def changepassword(request):
     return render(request, 'teacher/t_changepassword.html')
 
-
+@login_Check
 # 编辑试题
 def test_edit(request, tid):
     info = Questionitem.objects.get(id=tid)
@@ -143,6 +148,7 @@ def test_edit(request, tid):
 
 
 # 删除试题
+@login_Check
 def test_delete(request, tid):
     models.TestQuestion.objects.get(id=tid).delete()
     # 重定向返回本页面
@@ -150,6 +156,7 @@ def test_delete(request, tid):
 
 
 # 查看试题
+@login_Check
 def test_view(request, tid):
     info = Questionitem.objects.get(id=tid)
     dictChoice = {'A': 0, 'B': 0, 'C': 0, 'D': 0, '': 0}
@@ -167,12 +174,13 @@ def test_view(request, tid):
 
 
 # 查看成绩
+@login_Check
 def grades(request):
     gradelist = Grade.objects.order_by('-time')
 
     return render(request, 'teacher/t_grades.html', {'gradelist': gradelist})
 
-
+@login_Check
 def gradedetails(request, tid):
     myGrade = Grade.objects.get(id=tid)
     # errorque = ErrorQue.objects.filter(gradeid=tid)
@@ -198,46 +206,17 @@ def gradedetails(request, tid):
     return render(request, 'teacher/t_gradedetails.html', {'grade': myGrade, 'mychoice': queList, 'count': num})
 
 
-# 教师声明主页
-'''
-def tea_annou(request):
-    from student import models
-    if request.method == 'POST':
-        form = Announcement(request.POST)
-        if form.is_valid():
-            briefTitle = form.cleaned_data['briefTitle']
-            briefContent = form.cleaned_data['briefContent']
-            briefClass = form.cleaned_data['briefClass']
-            briefType = form.cleaned_data['briefType']
-            info = models.Announcement()
-            info.briefTitle = briefTitle
-            info.briefContent = briefContent
-            for i in briefClass:
-                info.briefClass += i + ','
-                print(i)
-            # info.briefClass = briefClass
-            info.briefType = briefType
-            info.save()
-        else:
-            print(request.POST.getlist('briefClass'))
-        return redirect('/tea_ann/')
-    else:
-        form = Announcement()
-        classes = Classes.objects.order_by('-id')
-        announ = models.Announcement.objects.order_by('-briefReleaseTime')
-        return render(request, 'teacher/t_annou.html', {'announ': announ, 'classes': classes, 'form': form})
-
-
-# 修改公告
-def tea_ann_edit(request, tid):
-    from student.models import Announcement
-    info = Announcement.objects.get(id=tid)
-    return render(request, 'teacher/t_ann_edit.html', {'info': info})
-
-
-# 删除公告
-def tea_ann_delete(request, tid):
-    from student.models import Announcement
-    Announcement.objects.get(id=tid).delete()
-    return redirect('/tea_ann/')
-'''
+# 重置密码
+@login_Check
+def repassword(request):
+    import hashlib
+    id = request.GET["id"]
+    u =     User.objects.get(id = id)
+    p_md5 = hashlib.md5("123456".encode(encoding='utf-8')).hexdigest()
+    u.password = p_md5
+    u.save()
+    return render(request,'teacher/t_manage.html')
+# 删除学生账号##################################################
+@login_Check
+def deleteStudent(request,id):
+    return

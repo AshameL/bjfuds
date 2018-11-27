@@ -1,19 +1,17 @@
+#coding:utf-8
 from django.shortcuts import render
 from .models import Chapter, Subchapter, Questionitem, Grade
 from teacher.models import QueAccurancy
 from django.http import HttpResponseRedirect
+from login.auth.incepter import login_Check
 
 
 # Create your views here.
-
+@login_Check
 def index(request):
     return render(request, "student/index.html")
 
-
-def base(request):
-    return render(request, 'student/base.html')
-
-
+@login_Check
 def questiontest(request):
     chapteritem = Chapter.objects.all()
     arr = []
@@ -24,6 +22,7 @@ def questiontest(request):
 
 
 # 考试页面
+@login_Check
 def exam(request, subid):
     questionlist = Questionitem.objects.filter(subchapterid=subid, visiable='1')
     num = 1
@@ -35,6 +34,7 @@ def exam(request, subid):
 
 
 # 计算成绩
+@login_Check
 def calculationGrade(request):
     if request.method == "POST":
         subid = request.POST['subid']
@@ -99,6 +99,7 @@ def calculationGrade(request):
 
 
 # 显示解析内容
+@login_Check
 def showAnalysis(request, gradeid):
     myGrade = Grade.objects.get(id=gradeid)
     queList = []
@@ -122,7 +123,7 @@ def showAnalysis(request, gradeid):
 
     return render(request, 'student/analysis.html', {"questionlist": queList, 'count': num})
 
-
+@login_Check
 def scorelist(request):
     # userid = request.session['userid']
     userid = 1
@@ -132,3 +133,4 @@ def scorelist(request):
         i.num = num
         num = num + 1
     return render(request, 'student/scorelist.html', {'gradelist': gradelist})
+

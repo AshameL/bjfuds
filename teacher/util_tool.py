@@ -55,7 +55,7 @@ def handle_uploaded_file(f, directory):
 
 # 保存为HTML文件
 def saveAsHTML(filename):
-    pythoncom.CoInitialize()
+    # pythoncom.CoInitialize()
     word = wc.Dispatch('Word.Application')
     doc = word.Documents.Open(filename)
     # 没有后缀名的前部分
@@ -154,7 +154,7 @@ def handle_p_list_without_style(m_p, table_dict):
 # 识别html  写入数据库
 def readAndWriteDB(text_line):
     # 实例化
-    info = TestQuestion()
+    info = TsetQuestion()  #这里有bug
     # 设置一个暂存文件行的栈区
     queue = []
     # 逐行读入，分析数据，写入数据库

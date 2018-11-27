@@ -1,3 +1,4 @@
+#coding:utf-8
 from ..models import User
 
 def authenticate(request,u,p):
@@ -10,6 +11,7 @@ def authenticate(request,u,p):
         # 放入session
         request.session['name'] = user.name
         request.session['username'] = user.username
+        request.session['type'] =user.type
         return user.type,user.username
     except:
         #print("用户名不存在")

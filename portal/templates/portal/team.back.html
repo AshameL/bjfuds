@@ -1,0 +1,1267 @@
+{% extends 'portal/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+{% block styleDisplay %}
+    #teamBlock{
+    margin-left: 9%;
+    }
+    .team-top{
+    margin-right: 1%;
+    }
+{% endblock %}
+{% block header1 %}
+    header1
+{% endblock %}
+{% block navActive %}
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse in" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav link-effect-4">
+            <li><a href="{% url 'homepage' %}" data-hover="课程介绍">课程介绍</a></li>
+            <li class="active"><a href="{% url 'team' %}" data-hover="教学团队">教学团队 </a></li>
+            <li><a href="{% url 'material' %}" data-hover="主要教材">主要教材</a></li>
+            <li><a href="{% url 'download' %}" data-hover="资料下载">资料下载 </a></li>
+            <li><a href="{% url 'contact' %}" data-hover="在线演示">在线演示</a></li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+{% endblock %}
+{% block team %}
+    <div class="team">
+        <div class="container">
+            <div class="ser-top">
+                <h3>教学团队</h3>
+                <div class="ser-t">
+                    <b></b>
+                    <span><i></i></span>
+                    <b class="line"></b>
+                </div>
+            </div>
+            <div id="teamBlock">
+                <div class="team-top" data-toggle="modal" data-target="#myModal">
+                    <div class="team-top1">
+                        <div class="swipebox">
+                            <img src="{% static 'images/ldm.jpg' %}" alt="" class="img-responsive">
+                            <div class="zoom-icon">
+                                <div class="zoom-icon1">
+                                    <h5>李冬梅</h5>
+                                    <h6>课程主要负责人</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-top" data-toggle="modal" data-target="#mengwei">
+                    <div class="team-top1">
+                        <div class="swipebox">
+                            <img src="{% static 'images/te1.png' %}" alt="" class="img-responsive">
+                            <div class="zoom-icon">
+                                <div class="zoom-icon1">
+                                    <h5>孟伟</h5>
+                                    <h6>课程主要负责人</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="team-top" data-toggle="modal" data-target="#fuhui">
+                    <div class="team-top1">
+                        <div class="swipebox">
+                            <img src="{% static 'images/te2.png' %}" alt="" class="img-responsive">
+                            <div class="zoom-icon">
+                                <div class="zoom-icon1">
+                                    <h5>付慧</h5>
+                                    <h6>课程主要负责人</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+{% endblock %}
+
+{% block modal %}
+    <!-- 模态框1----李冬梅（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 54%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">课程负责人情况</h4>
+                </div>
+                <div class="modal-body">
+                    <table width="75%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="content">
+                                <div id=newslist>
+                                    <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                       class="MsoNormal" align="left"><span
+                                            style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体">课程负责人情况<span
+                                            lang="EN-US"><o:p></o:p></span></span></p>
+                                    <table style="border-bottom: medium none; border-left: medium none; margin: auto auto auto 5.4pt; width: 468pt; border-collapse: collapse; border-top: medium none; border-right: medium none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-insideh: .5pt solid windowtext; mso-border-insidev: .5pt solid windowtext"
+                                           class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0"
+                                           width="624">
+                                        <tbody>
+                                        <tr style="page-break-inside: avoid; height: 31.2pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54.75pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt"
+                                                valign="top" rowspan="5" width="73">
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 12pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">基本<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">信息</span><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 12pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p></o:p></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">姓 名<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="120" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">李冬梅<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; text-indent: 12pt; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd; mso-char-indent-count: 1.0"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">性别<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">女<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 63pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="84">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">出生年月<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 98.25pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="131">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt"
+                                                        lang="EN-US">1973</span><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">年<span
+                                                        lang="EN-US">1</span>月<span lang="EN-US"><o:p></o:p></span></span>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr style="page-break-inside: avoid; height: 31pt; mso-yfti-irow: 1">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">最终学历<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; height: 31pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="120" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">博士<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; text-indent: 12pt; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd; mso-char-indent-count: 1.0"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">职 称<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 215.25pt; padding-right: 5.4pt; height: 31pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="287" colspan="3">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">副教授<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="page-break-inside: avoid; height: 21.95pt; mso-yfti-irow: 2">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 21.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">学<span
+                                                        lang="EN-US"><span
+                                                        style="mso-spacerun: yes">&nbsp; </span></span>位<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; height: 21.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="120" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">博士<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 21.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; text-indent: 12pt; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd; mso-char-indent-count: 1.0"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">职 务<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 215.25pt; padding-right: 5.4pt; height: 21.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="287" colspan="3">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">实验室主任<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="page-break-inside: avoid; height: 31.15pt; mso-yfti-irow: 3">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">所在院系<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; height: 31.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="120" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">计算机<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <h1 style="margin: 0cm -34.65pt 0pt 0cm"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt"
+                                                        lang="EN-US">E-mail<o:p></o:p></span></h1>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 215.25pt; padding-right: 5.4pt; height: 31.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="287" colspan="3">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt"
+                                                        lang="EN-US">wwsun@fudan.edu.cn<o:p></o:p></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="page-break-inside: avoid; height: 28.45pt; mso-yfti-irow: 4">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 99pt; padding-right: 5.4pt; height: 28.45pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="132" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">通信地址（邮编）<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 314.25pt; padding-right: 5.4pt; height: 28.45pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="419" colspan="5">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">复旦大学<span
+                                                        lang="EN-US">(</span>张江校区<span lang="EN-US">)</span>计算机学院<span
+                                                        lang="EN-US">(201203)<o:p></o:p></span></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 206.55pt; mso-yfti-irow: 5">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54.75pt; padding-right: 5.4pt; height: 206.55pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="73">
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">教学</span><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p></o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">情况<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 413.25pt; padding-right: 5.4pt; height: 206.55pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="551" colspan="7">
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">（<span
+                                                        lang="EN-US">1</span>）讲授<span lang="EN-US">2</span>门本科生课，<span
+                                                        lang="EN-US">3</span>门研究生课<span lang="EN-US">(</span>近五年<span
+                                                        lang="EN-US">)<o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">数据结构，本科生专业基础课，<span
+                                                        lang="EN-US">3+2</span>周学时，<span lang="EN-US">3</span>届共约<span
+                                                        lang="EN-US">120</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">程序设计，本科生专业基础课，<span
+                                                        lang="EN-US">3+2</span>周学时，<span lang="EN-US">2</span>届共约<span
+                                                        lang="EN-US">80</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">移动数据管理，研究生专业课，<span
+                                                        lang="EN-US">3</span>周学时，<span lang="EN-US">3</span>届共约<span
+                                                        lang="EN-US">60</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">移动计算，研究生专业课，<span
+                                                        lang="EN-US">3</span>周学时<span lang="EN-US">,1</span>届约<span
+                                                        lang="EN-US">20</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">无线移动网络，研究生专业课，<span
+                                                        lang="EN-US">3</span>周学时<span lang="EN-US">,1</span>届约<span
+                                                        lang="EN-US">20</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">（<span
+                                                        lang="EN-US">2</span>）指导学生毕业论文<span lang="EN-US">15</span>人<span
+                                                        lang="EN-US">(</span>近五年<span lang="EN-US">)<o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">（<span
+                                                        lang="EN-US">3</span>）获教学类奖励<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><font size="3"><span style="font-family: 仿宋"
+                                                                                          lang="EN-US">2008</span><span
+                                                        style="font-family: 仿宋">年获得复旦大学优秀研究生导师荣誉<span lang="EN-US"><o:p></o:p></span></span></font>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><font size="3"><span style="font-family: 仿宋"
+                                                                                          lang="EN-US">2008</span><span
+                                                        style="font-family: 仿宋">、<span lang="EN-US">2009</span>年获得复旦大学复华奖教金<span
+                                                        lang="EN-US"><o:p></o:p></span></span></font></p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">（<span
+                                                        lang="EN-US">4</span>）出版教材<span lang="EN-US">2</span>部<span
+                                                        lang="EN-US"><o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span
+                                                        style="font-family: 仿宋"><font size="3">施伯乐、孙未未、汪卫、张玥杰、陈彤兵、何震瀛，《数据结构教程》（普通高等教育<span
+                                                        lang="EN-US">“</span>十一五<span lang="EN-US">”</span>国家级规划教材），复旦大学出版社，<span
+                                                        lang="EN-US">2011<o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">孙未未，陈彤兵，朱良等，《数据库处理》，电子工业出版社，<span
+                                                        lang="EN-US">2010<o:p></o:p></span></font></span></p>
+                                                <p style="text-indent: 21pt; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="font-family: 黑体; mso-hansi-font-family: 宋体" lang="EN-US"><o:p><font
+                                                        size="3">&nbsp;</font></o:p></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 237.95pt; mso-yfti-irow: 6; mso-yfti-lastrow: yes">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54.75pt; padding-right: 5.4pt; height: 237.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="73">
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">学术<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">研究<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 413.25pt; padding-right: 5.4pt; height: 237.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="551" colspan="7">
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">近五年来作为项目负责人承担的学术研究课题<span
+                                                        lang="EN-US">:<o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: 仿宋" lang="EN-US">[1] </span><span
+                                                        style="font-family: 仿宋">国家自然科学基金“<span lang="EN-US">XML</span>格式数据的无线广播技术研究”<span
+                                                        lang="EN-US">(61073001)</span>，<span lang="EN-US">2006-2008<o:p></o:p></span></span></font>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: 仿宋" lang="EN-US">[2] </span><span
+                                                        style="font-family: 仿宋">国家<span lang="EN-US">863</span>课题“自组织网络中的服务合成研究”（<span
+                                                        lang="EN-US">2006AA01Z234)</span>，<span lang="EN-US">2006-2008<o:p></o:p></span></span></font>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: 仿宋" lang="EN-US">[3] </span><span
+                                                        style="font-family: 仿宋">国家自然科学基金“无线网络环境中数据广播技术研究”（<span
+                                                        lang="EN-US">60503035</span>），<span lang="EN-US">2011-2013<o:p></o:p></span></span></font>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: 仿宋" lang="EN-US">[4] </span><span
+                                                        style="font-family: 仿宋">教育部“无线移动计算环境中的索引技术研究”，<span
+                                                        lang="EN-US">2007-2009<o:p></o:p></span></span></font></p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: &quot;仿宋_GB2312&quot;,&quot;serif&quot;; mso-bidi-font-size: 10.5pt"
+                                                        lang="EN-US">[5] </span><span
+                                                        style="font-family: &quot;仿宋_GB2312&quot;,&quot;serif&quot;; mso-bidi-font-size: 10.5pt">盐城市政府“环保信息化系统中的地理信息支撑技术研究”，<span
+                                                        lang="EN-US">2010-2014</span></span><span
+                                                        style="font-family: 宋体" lang="EN-US"><o:p></o:p></span></font>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span
+                                                        style="font-family: 宋体"><font size="3">近五年来在国内核心期刊和重要国际学术会议发表学术论文<span
+                                                        lang="EN-US">30</span>余篇，限于篇幅<span
+                                                        lang="EN-US">,</span>详细列表请见<span lang="EN-US">DBLP</span>网站或本人主页<span
+                                                        lang="EN-US">http://homepage.fudan.edu.cn/wwsun</span>。<span
+                                                        lang="EN-US"><o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span
+                                                        style="font-family: 仿宋" lang="EN-US"><font size="3">[1] Weiwei Sun, Ping Yu, Yongrui Qing, Zhuoyao Zhang, Baihua Zheng. Two-Tier Air Indexing for On-Demand XML Data Broadcast. In Proceeding of the 28th IEEE International Conference on Distributed Computing Systems (ICDCS 2009), Montreal, Quebec, Canada.<o:p></o:p></font></span>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span
+                                                        style="font-family: 仿宋" lang="EN-US"><font size="3">[2] Weiwei Sun, Yongrui Qin, Ping Yu, Zhuoyao Zhang, Zhenying He. HFilter: Hybrid Finite Automaton Based Stream Filtering for Deep and Recursive XML Data. In Proceedings of 19th International Conference on Database and Expert Systems Applications (DEXA 2008). Turin, Italy, 1-5 September, 2008.<o:p></o:p></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体" lang="EN-US"><o:p><font
+                                                        size="3">&nbsp;</font></o:p></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="73">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="72">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="60">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="60">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="72">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="72">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="84">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="131">&nbsp;
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span lang="EN-US"><o:p><font
+                                            size="3" face="Times New Roman">&nbsp;</font></o:p></span></p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    </td>
+                    <td width="30">&nbsp;</td>
+                    </tr>
+                    </table></td>
+                    </tr>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+    <!-- 模态框1----孟伟（Modal） -->
+    <div class="modal fade" id="mengwei" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 54%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">课程负责人情况</h4>
+                </div>
+                <div class="modal-body">
+                    <table width="75%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="content">
+                                <div id=newslist>
+                                    <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                       class="MsoNormal" align="left"><span
+                                            style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体">课程负责人情况<span
+                                            lang="EN-US"><o:p></o:p></span></span></p>
+                                    <table style="border-bottom: medium none; border-left: medium none; margin: auto auto auto 5.4pt; width: 468pt; border-collapse: collapse; border-top: medium none; border-right: medium none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-insideh: .5pt solid windowtext; mso-border-insidev: .5pt solid windowtext"
+                                           class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0"
+                                           width="624">
+                                        <tbody>
+                                        <tr style="page-break-inside: avoid; height: 31.2pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54.75pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt"
+                                                valign="top" rowspan="5" width="73">
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 12pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">基本<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">信息</span><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 12pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p></o:p></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">姓 名<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="120" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">孟伟<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; text-indent: 12pt; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd; mso-char-indent-count: 1.0"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">性别<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">女<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 63pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="84">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">出生年月<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 98.25pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="131">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt"
+                                                        lang="EN-US">1973</span><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">年<span
+                                                        lang="EN-US">1</span>月<span lang="EN-US"><o:p></o:p></span></span>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr style="page-break-inside: avoid; height: 31pt; mso-yfti-irow: 1">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">最终学历<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; height: 31pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="120" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">博士<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; text-indent: 12pt; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd; mso-char-indent-count: 1.0"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">职 称<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 215.25pt; padding-right: 5.4pt; height: 31pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="287" colspan="3">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">副教授<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="page-break-inside: avoid; height: 21.95pt; mso-yfti-irow: 2">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 21.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">学<span
+                                                        lang="EN-US"><span
+                                                        style="mso-spacerun: yes">&nbsp; </span></span>位<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; height: 21.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="120" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">博士<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 21.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; text-indent: 12pt; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd; mso-char-indent-count: 1.0"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">职 务<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 215.25pt; padding-right: 5.4pt; height: 21.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="287" colspan="3">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">实验室主任<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="page-break-inside: avoid; height: 31.15pt; mso-yfti-irow: 3">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">所在院系<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; height: 31.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="120" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">计算机<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <h1 style="margin: 0cm -34.65pt 0pt 0cm"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt"
+                                                        lang="EN-US">E-mail<o:p></o:p></span></h1>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 215.25pt; padding-right: 5.4pt; height: 31.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="287" colspan="3">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt"
+                                                        lang="EN-US">wwsun@fudan.edu.cn<o:p></o:p></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="page-break-inside: avoid; height: 28.45pt; mso-yfti-irow: 4">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 99pt; padding-right: 5.4pt; height: 28.45pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="132" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">通信地址（邮编）<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 314.25pt; padding-right: 5.4pt; height: 28.45pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="419" colspan="5">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">复旦大学<span
+                                                        lang="EN-US">(</span>张江校区<span lang="EN-US">)</span>计算机学院<span
+                                                        lang="EN-US">(201203)<o:p></o:p></span></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 206.55pt; mso-yfti-irow: 5">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54.75pt; padding-right: 5.4pt; height: 206.55pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="73">
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">教学</span><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p></o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">情况<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 413.25pt; padding-right: 5.4pt; height: 206.55pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="551" colspan="7">
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">（<span
+                                                        lang="EN-US">1</span>）讲授<span lang="EN-US">2</span>门本科生课，<span
+                                                        lang="EN-US">3</span>门研究生课<span lang="EN-US">(</span>近五年<span
+                                                        lang="EN-US">)<o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">数据结构，本科生专业基础课，<span
+                                                        lang="EN-US">3+2</span>周学时，<span lang="EN-US">3</span>届共约<span
+                                                        lang="EN-US">120</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">程序设计，本科生专业基础课，<span
+                                                        lang="EN-US">3+2</span>周学时，<span lang="EN-US">2</span>届共约<span
+                                                        lang="EN-US">80</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">移动数据管理，研究生专业课，<span
+                                                        lang="EN-US">3</span>周学时，<span lang="EN-US">3</span>届共约<span
+                                                        lang="EN-US">60</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">移动计算，研究生专业课，<span
+                                                        lang="EN-US">3</span>周学时<span lang="EN-US">,1</span>届约<span
+                                                        lang="EN-US">20</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">无线移动网络，研究生专业课，<span
+                                                        lang="EN-US">3</span>周学时<span lang="EN-US">,1</span>届约<span
+                                                        lang="EN-US">20</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">（<span
+                                                        lang="EN-US">2</span>）指导学生毕业论文<span lang="EN-US">15</span>人<span
+                                                        lang="EN-US">(</span>近五年<span lang="EN-US">)<o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">（<span
+                                                        lang="EN-US">3</span>）获教学类奖励<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><font size="3"><span style="font-family: 仿宋"
+                                                                                          lang="EN-US">2008</span><span
+                                                        style="font-family: 仿宋">年获得复旦大学优秀研究生导师荣誉<span lang="EN-US"><o:p></o:p></span></span></font>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><font size="3"><span style="font-family: 仿宋"
+                                                                                          lang="EN-US">2008</span><span
+                                                        style="font-family: 仿宋">、<span lang="EN-US">2009</span>年获得复旦大学复华奖教金<span
+                                                        lang="EN-US"><o:p></o:p></span></span></font></p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">（<span
+                                                        lang="EN-US">4</span>）出版教材<span lang="EN-US">2</span>部<span
+                                                        lang="EN-US"><o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span
+                                                        style="font-family: 仿宋"><font size="3">施伯乐、孙未未、汪卫、张玥杰、陈彤兵、何震瀛，《数据结构教程》（普通高等教育<span
+                                                        lang="EN-US">“</span>十一五<span lang="EN-US">”</span>国家级规划教材），复旦大学出版社，<span
+                                                        lang="EN-US">2011<o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">孙未未，陈彤兵，朱良等，《数据库处理》，电子工业出版社，<span
+                                                        lang="EN-US">2010<o:p></o:p></span></font></span></p>
+                                                <p style="text-indent: 21pt; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="font-family: 黑体; mso-hansi-font-family: 宋体" lang="EN-US"><o:p><font
+                                                        size="3">&nbsp;</font></o:p></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 237.95pt; mso-yfti-irow: 6; mso-yfti-lastrow: yes">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54.75pt; padding-right: 5.4pt; height: 237.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="73">
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">学术<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">研究<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 413.25pt; padding-right: 5.4pt; height: 237.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="551" colspan="7">
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">近五年来作为项目负责人承担的学术研究课题<span
+                                                        lang="EN-US">:<o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: 仿宋" lang="EN-US">[1] </span><span
+                                                        style="font-family: 仿宋">国家自然科学基金“<span lang="EN-US">XML</span>格式数据的无线广播技术研究”<span
+                                                        lang="EN-US">(61073001)</span>，<span lang="EN-US">2006-2008<o:p></o:p></span></span></font>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: 仿宋" lang="EN-US">[2] </span><span
+                                                        style="font-family: 仿宋">国家<span lang="EN-US">863</span>课题“自组织网络中的服务合成研究”（<span
+                                                        lang="EN-US">2006AA01Z234)</span>，<span lang="EN-US">2006-2008<o:p></o:p></span></span></font>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: 仿宋" lang="EN-US">[3] </span><span
+                                                        style="font-family: 仿宋">国家自然科学基金“无线网络环境中数据广播技术研究”（<span
+                                                        lang="EN-US">60503035</span>），<span lang="EN-US">2011-2013<o:p></o:p></span></span></font>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: 仿宋" lang="EN-US">[4] </span><span
+                                                        style="font-family: 仿宋">教育部“无线移动计算环境中的索引技术研究”，<span
+                                                        lang="EN-US">2007-2009<o:p></o:p></span></span></font></p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: &quot;仿宋_GB2312&quot;,&quot;serif&quot;; mso-bidi-font-size: 10.5pt"
+                                                        lang="EN-US">[5] </span><span
+                                                        style="font-family: &quot;仿宋_GB2312&quot;,&quot;serif&quot;; mso-bidi-font-size: 10.5pt">盐城市政府“环保信息化系统中的地理信息支撑技术研究”，<span
+                                                        lang="EN-US">2010-2014</span></span><span
+                                                        style="font-family: 宋体" lang="EN-US"><o:p></o:p></span></font>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span
+                                                        style="font-family: 宋体"><font size="3">近五年来在国内核心期刊和重要国际学术会议发表学术论文<span
+                                                        lang="EN-US">30</span>余篇，限于篇幅<span
+                                                        lang="EN-US">,</span>详细列表请见<span lang="EN-US">DBLP</span>网站或本人主页<span
+                                                        lang="EN-US">http://homepage.fudan.edu.cn/wwsun</span>。<span
+                                                        lang="EN-US"><o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span
+                                                        style="font-family: 仿宋" lang="EN-US"><font size="3">[1] Weiwei Sun, Ping Yu, Yongrui Qing, Zhuoyao Zhang, Baihua Zheng. Two-Tier Air Indexing for On-Demand XML Data Broadcast. In Proceeding of the 28th IEEE International Conference on Distributed Computing Systems (ICDCS 2009), Montreal, Quebec, Canada.<o:p></o:p></font></span>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span
+                                                        style="font-family: 仿宋" lang="EN-US"><font size="3">[2] Weiwei Sun, Yongrui Qin, Ping Yu, Zhuoyao Zhang, Zhenying He. HFilter: Hybrid Finite Automaton Based Stream Filtering for Deep and Recursive XML Data. In Proceedings of 19th International Conference on Database and Expert Systems Applications (DEXA 2008). Turin, Italy, 1-5 September, 2008.<o:p></o:p></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体" lang="EN-US"><o:p><font
+                                                        size="3">&nbsp;</font></o:p></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="73">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="72">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="60">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="60">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="72">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="72">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="84">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="131">&nbsp;
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span lang="EN-US"><o:p><font
+                                            size="3" face="Times New Roman">&nbsp;</font></o:p></span></p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    </td>
+                    <td width="30">&nbsp;</td>
+                    </tr>
+                    </table></td>
+                    </tr>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+    <!-- 模态框1----付慧（Modal） -->
+    <div class="modal fade" id="fuhui" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 54%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">课程负责人情况</h4>
+                </div>
+                <div class="modal-body">
+                    <table width="75%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="content">
+                                <div id=newslist>
+                                    <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                       class="MsoNormal" align="left"><span
+                                            style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体">课程负责人情况<span
+                                            lang="EN-US"><o:p></o:p></span></span></p>
+                                    <table style="border-bottom: medium none; border-left: medium none; margin: auto auto auto 5.4pt; width: 468pt; border-collapse: collapse; border-top: medium none; border-right: medium none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-insideh: .5pt solid windowtext; mso-border-insidev: .5pt solid windowtext"
+                                           class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0"
+                                           width="624">
+                                        <tbody>
+                                        <tr style="page-break-inside: avoid; height: 31.2pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54.75pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt"
+                                                valign="top" rowspan="5" width="73">
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 12pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">基本<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">信息</span><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 12pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p></o:p></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">姓 名<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="120" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">付慧<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; text-indent: 12pt; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd; mso-char-indent-count: 1.0"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">性别<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">女<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 63pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="84">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">出生年月<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 98.25pt; padding-right: 5.4pt; height: 31.2pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt"
+                                                valign="top" width="131">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt"
+                                                        lang="EN-US">1973</span><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">年<span
+                                                        lang="EN-US">1</span>月<span lang="EN-US"><o:p></o:p></span></span>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr style="page-break-inside: avoid; height: 31pt; mso-yfti-irow: 1">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">最终学历<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; height: 31pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="120" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">博士<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; text-indent: 12pt; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd; mso-char-indent-count: 1.0"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">职 称<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 215.25pt; padding-right: 5.4pt; height: 31pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="287" colspan="3">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">副教授<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="page-break-inside: avoid; height: 21.95pt; mso-yfti-irow: 2">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 21.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">学<span
+                                                        lang="EN-US"><span
+                                                        style="mso-spacerun: yes">&nbsp; </span></span>位<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; height: 21.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="120" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">博士<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 21.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; text-indent: 12pt; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd; mso-char-indent-count: 1.0"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">职 务<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 215.25pt; padding-right: 5.4pt; height: 21.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="287" colspan="3">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">实验室主任<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="page-break-inside: avoid; height: 31.15pt; mso-yfti-irow: 3">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">所在院系<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; height: 31.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="120" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">计算机<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54pt; padding-right: 5.4pt; height: 31.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="72">
+                                                <h1 style="margin: 0cm -34.65pt 0pt 0cm"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt"
+                                                        lang="EN-US">E-mail<o:p></o:p></span></h1>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 215.25pt; padding-right: 5.4pt; height: 31.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="287" colspan="3">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt"
+                                                        lang="EN-US">wwsun@fudan.edu.cn<o:p></o:p></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="page-break-inside: avoid; height: 28.45pt; mso-yfti-irow: 4">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 99pt; padding-right: 5.4pt; height: 28.45pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="132" colspan="2">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">通信地址（邮编）<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 314.25pt; padding-right: 5.4pt; height: 28.45pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="419" colspan="5">
+                                                <p style="line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">复旦大学<span
+                                                        lang="EN-US">(</span>张江校区<span lang="EN-US">)</span>计算机学院<span
+                                                        lang="EN-US">(201203)<o:p></o:p></span></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 206.55pt; mso-yfti-irow: 5">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54.75pt; padding-right: 5.4pt; height: 206.55pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="73">
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">教学</span><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p></o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">情况<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 413.25pt; padding-right: 5.4pt; height: 206.55pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="551" colspan="7">
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">（<span
+                                                        lang="EN-US">1</span>）讲授<span lang="EN-US">2</span>门本科生课，<span
+                                                        lang="EN-US">3</span>门研究生课<span lang="EN-US">(</span>近五年<span
+                                                        lang="EN-US">)<o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">数据结构，本科生专业基础课，<span
+                                                        lang="EN-US">3+2</span>周学时，<span lang="EN-US">3</span>届共约<span
+                                                        lang="EN-US">120</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">程序设计，本科生专业基础课，<span
+                                                        lang="EN-US">3+2</span>周学时，<span lang="EN-US">2</span>届共约<span
+                                                        lang="EN-US">80</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">移动数据管理，研究生专业课，<span
+                                                        lang="EN-US">3</span>周学时，<span lang="EN-US">3</span>届共约<span
+                                                        lang="EN-US">60</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">移动计算，研究生专业课，<span
+                                                        lang="EN-US">3</span>周学时<span lang="EN-US">,1</span>届约<span
+                                                        lang="EN-US">20</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">无线移动网络，研究生专业课，<span
+                                                        lang="EN-US">3</span>周学时<span lang="EN-US">,1</span>届约<span
+                                                        lang="EN-US">20</span>人<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">（<span
+                                                        lang="EN-US">2</span>）指导学生毕业论文<span lang="EN-US">15</span>人<span
+                                                        lang="EN-US">(</span>近五年<span lang="EN-US">)<o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">（<span
+                                                        lang="EN-US">3</span>）获教学类奖励<span lang="EN-US"><o:p></o:p></span></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><font size="3"><span style="font-family: 仿宋"
+                                                                                          lang="EN-US">2008</span><span
+                                                        style="font-family: 仿宋">年获得复旦大学优秀研究生导师荣誉<span lang="EN-US"><o:p></o:p></span></span></font>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><font size="3"><span style="font-family: 仿宋"
+                                                                                          lang="EN-US">2008</span><span
+                                                        style="font-family: 仿宋">、<span lang="EN-US">2009</span>年获得复旦大学复华奖教金<span
+                                                        lang="EN-US"><o:p></o:p></span></span></font></p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">（<span
+                                                        lang="EN-US">4</span>）出版教材<span lang="EN-US">2</span>部<span
+                                                        lang="EN-US"><o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span
+                                                        style="font-family: 仿宋"><font size="3">施伯乐、孙未未、汪卫、张玥杰、陈彤兵、何震瀛，《数据结构教程》（普通高等教育<span
+                                                        lang="EN-US">“</span>十一五<span lang="EN-US">”</span>国家级规划教材），复旦大学出版社，<span
+                                                        lang="EN-US">2011<o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 仿宋"><font size="3">孙未未，陈彤兵，朱良等，《数据库处理》，电子工业出版社，<span
+                                                        lang="EN-US">2010<o:p></o:p></span></font></span></p>
+                                                <p style="text-indent: 21pt; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span
+                                                        style="font-family: 黑体; mso-hansi-font-family: 宋体" lang="EN-US"><o:p><font
+                                                        size="3">&nbsp;</font></o:p></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 237.95pt; mso-yfti-irow: 6; mso-yfti-lastrow: yes">
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 54.75pt; padding-right: 5.4pt; height: 237.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="73">
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 黑体; font-size: 14pt; mso-bidi-font-size: 12.0pt; mso-hansi-font-family: 宋体"
+                                                        lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">学术<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                                <p style="text-align: left; line-height: 200%; margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal" align="left"><span
+                                                        style="line-height: 200%; font-family: 宋体; font-size: 12pt">研究<span
+                                                        lang="EN-US"><o:p></o:p></span></span></p>
+                                            </td>
+                                            <td style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 413.25pt; padding-right: 5.4pt; height: 237.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt"
+                                                valign="top" width="551" colspan="7">
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体"><font size="3">近五年来作为项目负责人承担的学术研究课题<span
+                                                        lang="EN-US">:<o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: 仿宋" lang="EN-US">[1] </span><span
+                                                        style="font-family: 仿宋">国家自然科学基金“<span lang="EN-US">XML</span>格式数据的无线广播技术研究”<span
+                                                        lang="EN-US">(61073001)</span>，<span lang="EN-US">2006-2008<o:p></o:p></span></span></font>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: 仿宋" lang="EN-US">[2] </span><span
+                                                        style="font-family: 仿宋">国家<span lang="EN-US">863</span>课题“自组织网络中的服务合成研究”（<span
+                                                        lang="EN-US">2006AA01Z234)</span>，<span lang="EN-US">2006-2008<o:p></o:p></span></span></font>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: 仿宋" lang="EN-US">[3] </span><span
+                                                        style="font-family: 仿宋">国家自然科学基金“无线网络环境中数据广播技术研究”（<span
+                                                        lang="EN-US">60503035</span>），<span lang="EN-US">2011-2013<o:p></o:p></span></span></font>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: 仿宋" lang="EN-US">[4] </span><span
+                                                        style="font-family: 仿宋">教育部“无线移动计算环境中的索引技术研究”，<span
+                                                        lang="EN-US">2007-2009<o:p></o:p></span></span></font></p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><font size="3"><span
+                                                        style="font-family: &quot;仿宋_GB2312&quot;,&quot;serif&quot;; mso-bidi-font-size: 10.5pt"
+                                                        lang="EN-US">[5] </span><span
+                                                        style="font-family: &quot;仿宋_GB2312&quot;,&quot;serif&quot;; mso-bidi-font-size: 10.5pt">盐城市政府“环保信息化系统中的地理信息支撑技术研究”，<span
+                                                        lang="EN-US">2010-2014</span></span><span
+                                                        style="font-family: 宋体" lang="EN-US"><o:p></o:p></span></font>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span
+                                                        style="font-family: 宋体"><font size="3">近五年来在国内核心期刊和重要国际学术会议发表学术论文<span
+                                                        lang="EN-US">30</span>余篇，限于篇幅<span
+                                                        lang="EN-US">,</span>详细列表请见<span lang="EN-US">DBLP</span>网站或本人主页<span
+                                                        lang="EN-US">http://homepage.fudan.edu.cn/wwsun</span>。<span
+                                                        lang="EN-US"><o:p></o:p></span></font></span></p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span
+                                                        style="font-family: 仿宋" lang="EN-US"><font size="3">[1] Weiwei Sun, Ping Yu, Yongrui Qing, Zhuoyao Zhang, Baihua Zheng. Two-Tier Air Indexing for On-Demand XML Data Broadcast. In Proceeding of the 28th IEEE International Conference on Distributed Computing Systems (ICDCS 2009), Montreal, Quebec, Canada.<o:p></o:p></font></span>
+                                                </p>
+                                                <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span
+                                                        style="font-family: 仿宋" lang="EN-US"><font size="3">[2] Weiwei Sun, Yongrui Qin, Ping Yu, Zhuoyao Zhang, Zhenying He. HFilter: Hybrid Finite Automaton Based Stream Filtering for Deep and Recursive XML Data. In Proceedings of 19th International Conference on Database and Expert Systems Applications (DEXA 2008). Turin, Italy, 1-5 September, 2008.<o:p></o:p></font></span>
+                                                </p>
+                                                <p style="margin: 0cm -34.65pt 0pt 0cm; mso-para-margin-right: -3.3gd"
+                                                   class="MsoNormal"><span style="font-family: 宋体" lang="EN-US"><o:p><font
+                                                        size="3">&nbsp;</font></o:p></span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="73">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="72">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="60">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="60">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="72">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="72">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="84">&nbsp;
+                                            </td>
+                                            <td style="border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent; border-top: #f0f0f0; border-right: #f0f0f0"
+                                                width="131">&nbsp;
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <p style="margin: 0cm 0cm 0pt" class="MsoNormal"><span lang="EN-US"><o:p><font
+                                            size="3" face="Times New Roman">&nbsp;</font></o:p></span></p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    </td>
+                    <td width="30">&nbsp;</td>
+                    </tr>
+                    </table></td>
+                    </tr>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+{% endblock %}
